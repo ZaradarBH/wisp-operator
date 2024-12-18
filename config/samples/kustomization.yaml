@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- wisp_v1alpha1_web.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

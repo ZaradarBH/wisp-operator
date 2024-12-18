@@ -1,0 +1,23 @@
+# permissions for end users to view webs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: wisp-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: web-viewer-role
+rules:
+- apiGroups:
+  - wisp.wispcompute.com
+  resources:
+  - webs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - wisp.wispcompute.com
+  resources:
+  - webs/status
+  verbs:
+  - get
